@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style></style>
+  <title>烂笔头</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>FRANK OCEAN</h1>
+  </div>
+</body>
+
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    height: 1000px;
+    background: #0c0c0d;
+    background-image: url(./二叉树.png);
+  }
+
+  button {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
+
+<script>
+
+  console.log('hello')
+  // 定义二叉树
+
+  const root = {
+    val: 'A',
+    left: {
+      val: 'B',
+      left: {
+        val: 'D'
+      },
+      right: {
+        val: 'E'
+      }
+    },
+    right: {
+      val: 'C',
+      right: {
+        val: 'F'
+      }
+    }
+  }
+
+  /**
+   * 先序,中序,后续遍历对应的是根节点的位置
+   */
+
+  // 先序遍历
+  function preOrder(root) {
+
+
+    if (!root) {
+      return
+    }
+
+    console.log('当前子节点为:', root.val)
+
+    preOrder(root.left)
+    preOrder(root.right)
+
+  }
+
+  preOrder(root)
+
+
+
+
+
+</script>
